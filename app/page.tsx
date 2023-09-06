@@ -7,18 +7,15 @@ import { lazy } from 'react';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center relative">
-
-      {/* <h3 className='text-gray-300 font-serif'>Videography & Photography</h3> */}
-
-      <div className='mt-20'>
-        <div className='mb-20 w-full'>
-          <div className='mx-auto w-full max-w-screen-xl md:mb-28 lg:w-5/6'>
+      <div className='mt-8'>
+        <div className='mb-16 w-full'>
+          <div className='mx-auto w-full max-w-screen-xl md:mb-28 lg:w-11/12'>
             <div className="relative group">
               <Image 
                 src={goldenAsset} 
                 alt={'mountain sunset'} 
-                width={1111} 
-                height={687} 
+                width={1333} 
+                height={824} 
                 className='rounded-xl shadow-lg shadow-gray-500 group-hover:scale-105 hover:duration-700 ease-in-out scale-100 blur-0' 
                 quality={100} 
               />
@@ -62,7 +59,7 @@ export default function Home() {
           </div>
           <div className=" flex w-full flex-col space-y-3 text-center sm:flex-row sm:space-x-3 sm:space-y-0 lg:w-auto">
             <a className="whitespace-no-wrap flex-auto rounded-md border border-black bg-black px-5 py-1 font-title text-lg text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-black dark:border-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white sm:py-3" href="https://vercel.com/guides/nextjs-multi-tenant-application" rel="noreferrer" target="_blank">Create a Profile</a>
-            <a className="whitespace-no-wrap flex-auto rounded-md border border-stone-200 px-5 py-1 font-title text-lg text-black transition-all duration-150 ease-in-out hover:border-black dark:border-stone-700 dark:text-white dark:hover:border-white sm:py-3" href="https://app.vercel.pub" rel="noreferrer" target="_blank">Create your publication</a>
+            <a className="whitespace-no-wrap flex-auto rounded-md border border-stone-200 px-5 py-1 font-title text-lg text-black transition-all duration-150 ease-in-out hover:border-black dark:border-stone-700 dark:text-white dark:hover:border-white sm:py-3" href="https://app.vercel.pub" rel="noreferrer" target="_blank">Discover Profiles</a>
           </div>
         </div> 
       </div>
