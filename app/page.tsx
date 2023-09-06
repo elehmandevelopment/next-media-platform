@@ -9,18 +9,18 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center relative">
       <div className='mt-8'>
         <div className='mb-16 w-full'>
-          <div className='mx-auto w-full max-w-screen-xl md:mb-28 lg:w-11/12'>
+          <div className='mx-auto w-full md:mb-28 lg:w-11/12'>
             <div className="relative group">
               <Image 
                 src={goldenAsset} 
                 alt={'mountain sunset'} 
                 width={1333} 
                 height={824} 
-                className='rounded-xl shadow-lg shadow-gray-500 group-hover:scale-105 hover:duration-700 ease-in-out scale-100 blur-0' 
+                className='rounded-xl shadow-lg shadow-gray-500 blur-0' 
                 quality={100} 
               />
               
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-105 hover:duration-700 ease-in-out scale-100">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-[1.04] ease-in-out duration-700">
                 <Image 
                   src={nextLogo} 
                   alt='logo' 
