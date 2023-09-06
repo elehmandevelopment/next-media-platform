@@ -1,17 +1,72 @@
 import Image from 'next/image'
 
+import goldenAsset from '/public/assets/next-golden-original.png';
+import nextLogo from '/public/assets/next-logo.png';
+import { lazy } from 'react';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <div className='flex items-end'>
-          <h1 className='text-4xl'>NEXT</h1><h3 className='text-xl'>Media</h3>
-        </div>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-center relative">
 
-      {/* <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-      </div> */}
+      {/* <h3 className='text-gray-300 font-serif'>Videography & Photography</h3> */}
+
+      <div className='mt-20'>
+        <div className='mb-20 w-full'>
+          <div className='mx-auto w-full max-w-screen-xl md:mb-28 lg:w-5/6'>
+            <div className="relative group">
+              <Image 
+                src={goldenAsset} 
+                alt={'mountain sunset'} 
+                width={1111} 
+                height={687} 
+                className='rounded-xl shadow-lg shadow-gray-500 group-hover:scale-105 hover:duration-700 ease-in-out scale-100 blur-0' 
+                quality={100} 
+              />
+              
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-105 hover:duration-700 ease-in-out scale-100">
+                <Image 
+                  src={nextLogo} 
+                  alt='logo' 
+                  width={333} 
+                  height={333} 
+                  className='relative' 
+                  quality={100} 
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div className="relative group mb-8">
+        
+        
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <Image 
+            src={nextLogo} 
+            alt='logo' 
+            width={333} 
+            height={333} 
+            className='relative' 
+            quality={100} 
+            loading="lazy"
+          />
+        </div>
+
+        <div className='h-60 sm:h-40 lg:h-auto fixed inset-x-0 bottom-5 mx-5 flex max-w-screen-xl flex-col items-center justify-between space-y-3 rounded-lg border-t-4 border-black bg-white px-5 pb-3 pt-0 drop-shadow-lg transition-all duration-150 ease-in-out dark:border dark:border-t-4 dark:border-stone-700 dark:bg-black dark:text-white lg:flex-row lg:space-y-0 lg:pt-3 xl:mx-auto'>
+          <div className="text-center lg:text-left">
+            <p className="font-title text-lg text-black dark:text-white sm:text-2xl">Platforms Starter Kit Demo</p>
+            <p className=" mt-2 text-sm text-stone-700 dark:text-stone-300 lg:mt-0">This is a demo site showcasing how to build a multi-tenant application with
+            <a className="font-semibold text-black underline dark:text-white px-1" href="https://platformize.co" rel="noreferrer" target="_blank">custom domain</a>support.</p>
+          </div>
+          <div className=" flex w-full flex-col space-y-3 text-center sm:flex-row sm:space-x-3 sm:space-y-0 lg:w-auto">
+            <a className="whitespace-no-wrap flex-auto rounded-md border border-black bg-black px-5 py-1 font-title text-lg text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-black dark:border-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white sm:py-3" href="https://vercel.com/guides/nextjs-multi-tenant-application" rel="noreferrer" target="_blank">Create a Profile</a>
+            <a className="whitespace-no-wrap flex-auto rounded-md border border-stone-200 px-5 py-1 font-title text-lg text-black transition-all duration-150 ease-in-out hover:border-black dark:border-stone-700 dark:text-white dark:hover:border-white sm:py-3" href="https://app.vercel.pub" rel="noreferrer" target="_blank">Create your publication</a>
+          </div>
+        </div> 
+      </div>
+      
     </main>
   )
 }
